@@ -1,0 +1,39 @@
+div.container
+	div.page-header
+		h1 NextRIPTA
+			small  401-250-3441
+	h2 Usage
+	p
+		| Text 
+		code #{ "[Stop Name]" }
+		|  to 401-250-3441
+	p
+		| Try 
+		code thayer
+		|  to get stop times from the Thayer tunnel
+	h2 API
+	h3 Stop ID lookup
+	div.well
+		code /api/stops/:name
+	p Where ":name" is the name of the stop you want to lookup (usually the name of the cross streets).
+	p Try with: thayer, preston or wampanoag.
+
+	h3 Next Bus Lookup
+	div.well
+		code /api/next/:stopId
+	p Where ":stopId" is the ID of the stop, this will give you the next 5 arrivals at the specified stop.
+	h4 Sample Output
+	div.well
+		code [{"arrival_time":733,"trip_headsign":"42 Providence"},{"arrival_time":735,"trip_headsign":"19 Plainfield"},{"arrival_time":735,"trip_headsign":"19 Plainfield"},{"arrival_time":735,"trip_headsign":"92 FEDERAL HILL"},{"arrival_time":735,"trip_headsign":"92 FEDERAL HILL"}]
+	p 
+		code arrival_time
+		|  is the number of minutes past midnight and 
+		code trip_headsign
+		|  is the route the bus is on.
+	p Try with: 16905
+
+	h2 About
+	p API to lookup specific routes will be added soon. Some data in the database may be out-of-date due to current construction at Kennedy Plaza. I will try to get the newest data feed from RIPTA soon.
+
+	h2 Disclaimer
+	p NextRIPTA is not affiliated with the Rhode Island Public Transit Authority or any of its affiliates. For more information, contact jona<a href="http://www.google.com/recaptcha/mailhide/d?k=01YSM4SSamTe9mWN6JIqxniw==&amp;c=aD1K9t2Q8CQ0vpMmq21ndCI3X0FMUOdiePYeQ-nahUE=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501YSM4SSamTe9mWN6JIqxniw\75\75\46c\75aD1K9t2Q8CQ0vpMmq21ndCI3X0FMUOdiePYeQ-nahUE\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">...</a>@gmail.com
