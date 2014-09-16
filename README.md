@@ -1,2 +1,2 @@
 # NextRIPTA
-Check it out [here](ripta.jonathanysp.com)
+Check it out [here](http://ripta.jonathanysp.com)
